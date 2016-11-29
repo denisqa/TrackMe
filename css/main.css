@@ -1,0 +1,230 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background:#f1f1f1;
+	min-width:400px;
+}
+header{
+	height:100px;
+	width:100%;
+	background-color:#a3d2ff;
+}
+main {
+	min-height:73%;
+	width:90%;
+	margin:0 auto;
+}
+footer{
+	height:100px;
+	width:100%;
+	background-color:#000;
+}
+
+/* ### HEADER ### */
+#head-block{
+	width:90%;
+	margin:0 auto;
+}
+.logo{
+	background: url("../img/logo1.png");
+	width:100px;
+	height:100px;
+	background-size:cover;
+	float:left;
+}
+.head-right{
+	float:right;
+	margin-right:20px;
+}
+#login{
+	width:300px;
+	height:150px;
+	border-radius:5px;
+	background:#d3d3d3;
+	position: fixed;
+	display:none;
+	top: 45%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -150px;
+	z-index:5;
+	padding-top:85px;
+}
+#login form{
+	text-align:center;
+}
+#login form label{
+	float:left;
+	margin-left:20px;
+	margin-top:2px;
+}
+#login input[type="text"], #login input[type="password"]{
+	width:180px;
+	float:right;
+	margin-right:20px;
+}
+#login input[type="text"]:focus, #login input[type="password"]:focus{
+	background:#a3d2ff;
+}
+.loginBack{
+	width:21px;
+	height:21px;
+	position:absolute;
+	top:-5px;
+	left:15px;
+	display:none;
+	cursor:pointer;
+	font-size:26px;
+}
+.loginBack:hover{
+	color:#a3d2ff;
+}
+#overlay{
+	z-index:3;
+	position:fixed;
+	background:#000;
+	width:100%;
+	height:100%;
+	top: 0;
+	left:0;
+	opacity:0.7;
+	display:none;
+}
+.loginBtn, .registrBtn, .loginButton, .registerButton{
+	margin:0 auto 10px auto;
+	text-align:center;
+	padding:5px 0;
+	display:block;
+	width:200px;
+	border:1px solid black;
+}
+.loginBtn:hover, .registrBtn:hover, .loginButton:hover, .registerButton:hover{
+	background:#a3d2ff;
+	opacity:0.8;
+	cursor:pointer;
+}
+.logout{
+	cursor:pointer;
+}
+/* ### HEADER END ### */
+
+/* ### LEFT COL ### */
+#left-col{
+	background:#fff;
+	margin:10px 20px 20px 0;
+	float:left;
+	width:30%;
+	max-width:250px;
+	height:100%;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	padding-bottom:20px;
+	border-radius:5px;
+}
+#left-col .user-photo{
+	text-align:center;
+}
+#left-col .user-photo img{
+	width:100%;
+	max-width:250px;
+	max-height:250px;
+}
+#left-col input{
+	width:80%;
+}
+.icon{
+    display: inline-block;
+    width: 25px;
+    height: 35px;
+    margin: 0 5px;
+    vertical-align: bottom;
+	background: url("../img/sprites.png") no-repeat;
+	background-size:120px;
+}
+.icon-city{
+	background-position: -66px -61px;
+}
+.icon-email{
+	background-position: -6px 8px;
+}
+.icon-phone{
+	background-position: -35px 8px;
+}
+.editInf{
+	position:absolute;
+	margin-left:10px;
+	margin-top:5px;
+	opacity:0.4;
+	cursor:pointer;
+}
+.fileUpload{
+	margin-left:34px;
+}
+#editableBtn{
+	margin-top:10px;
+	margin-left:34px;
+}
+/* ### LEFT COL END ### */
+
+/* ### RIGHT COL ### */
+#right-col{
+	margin:10px 0 20px 0;
+	overflow: hidden;
+	height:100%;
+}
+.user-track{
+	width:97%;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	border-radius:5px;
+	margin:0px auto 20px auto;
+	padding-bottom:10px;
+}
+.user-track:first-child{
+	margin-top:10px;
+}
+.icon-right{
+    display: inline-block;
+    width: 25px;
+    height: 35px;
+    margin: 0 20px;
+    vertical-align: bottom;
+	background: url("../img/sprites-bike.png") no-repeat;
+	background-size:150px;
+}
+.icon-bike{
+	background-position: -6px -41px;
+}
+.track-title{
+	border-bottom:2px solid #009688;
+	width:95%;
+	margin:0px auto 20px auto;
+}
+.track-title a{
+	font-family: "Roboto", sans-serif;
+	font-weight:bold;
+	color:#757598;
+	font-size:22px;
+	text-decoration:none;
+}
+.track-map{
+	width:100%;
+	height:300px;
+}
+.track-dst{
+	display:inline-block;
+	margin-right:50px;
+}
+.icon-ruler{
+	background: url("../img/ruler.png") no-repeat;
+	background-size:25px;
+	background-position: 0px 10px;
+}
+.icon-time{
+	background: url("../img/clock.png") no-repeat;
+	background-size:25px;
+	background-position: 0px 10px;
+}
+.track-time{
+	display:inline-block;
+}
+/* ### RIGHT COL END ### */
