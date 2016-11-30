@@ -18,7 +18,7 @@ else{
 
 
 if($loginBool==true && $passBool==true){
-	$link = mysqli_connect('mysql.hostinger.ru', 'u385066429_ltrac', 'ltracker', 'u385066429_ltrac');
+	include '../config/config.php';
 	$result = mysqli_query($link, 'SELECT id, login, password FROM users');
 	while($row = mysqli_fetch_assoc($result)){ 
 		if($row['login']==$login){

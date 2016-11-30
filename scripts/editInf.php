@@ -33,7 +33,7 @@ else{
 /* ---------- END REVISE $city, $email, $phone ---------- */
 
 if($cityBool==true && $emailBool==true && $phoneBool==true){
-	$link = mysqli_connect('mysql.hostinger.ru', 'u385066429_ltrac', 'ltracker', 'u385066429_ltrac');
+	include '../config/config.php';
 	if(strcmp($image, "0")==0) $result = mysqli_query($link, "UPDATE users SET city='$city', email='$email', phoneNumber='$phone' WHERE login = '".$_COOKIE['login']."' AND password = '".$_COOKIE['pass']."';");
 	else $result = mysqli_query($link, "UPDATE users SET city='$city', email='$email', phoneNumber='$phone', image='$image' WHERE login = '".$_COOKIE['login']."' AND password = '".$_COOKIE['pass']."';");
 	mysqli_close($link); 	

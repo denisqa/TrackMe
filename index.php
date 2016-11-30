@@ -17,7 +17,7 @@
 			<script src="js/trackList.js"></script>
 			<div class="tracks">
 				<?php
-					$link = mysqli_connect('mysql.hostinger.ru', 'u385066429_ltrac', 'ltracker', 'u385066429_ltrac');
+					include './config/config.php';
 					$result1 = mysqli_query($link, "SELECT * FROM tracks WHERE user_id=".(int)$_COOKIE['id']." ORDER BY track_id DESC");
 					$result = mysqli_query($link, "SELECT * FROM tracks WHERE user_id=".(int)$_COOKIE['id']." ORDER BY track_id DESC LIMIT 10"); //Нужна проверка на правильности cookie id, login, pass
 					$tracks = array();

@@ -27,7 +27,7 @@
 						</script>';
 				}
 				else{
-					$link = mysqli_connect('mysql.hostinger.ru', 'u385066429_ltrac', 'ltracker', 'u385066429_ltrac');
+					include './config/config.php';
 					$result = mysqli_query($link, "SELECT * FROM users WHERE login = '".$_COOKIE['login']."' AND password = '".$_COOKIE['pass']."';");
 					if(mysqli_num_rows($result) == 0) {
 						setcookie("id", "", time()-3600, "/");
