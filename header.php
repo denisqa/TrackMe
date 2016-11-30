@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ltracker</title>
+		<title>TrackMe</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/main.css">
 		<script src="js/jquery-3.0.0.js"></script>

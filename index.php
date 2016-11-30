@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<main>
+        <main>
 		<div id="left-col">
 			<div class="user-photo">
 				<span class="editInf">Edit</span>
