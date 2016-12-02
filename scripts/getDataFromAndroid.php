@@ -9,12 +9,12 @@ $coord = $lat . ',' . $longt;
 $temp="";
 
 include '../config/config.php';
-$result = mysqli_query($link, "SELECT * FROM tracks WHERE user_id = $userID and track_id = $trackID");
+$result = mysqli_query($link, "SELECT * FROM tracks WHERE user_id = $userID and track_id = '$trackID'");
 if(mysqli_num_rows($result) == 0) {
-	$result1 = mysqli_query($link, "INSERT INTO tracks(track_id,track_name, track_data, user_id) VALUES($trackID, '$trackName', '$coord', $userID)");
+	$result1 = mysqli_query($link, "INSERT INTO tracks(track_id,track_name, track_data, user_id) VALUES('$trackID', '$trackName', '$coord', $userID)");
 }
 else{
-	$track_id=0;
+	$track_id="";
 	while( $row = mysqli_fetch_assoc($result) ){ 
 		$temp=$row['track_data'];
 		$track_id=$row['track_id'];
@@ -42,7 +42,7 @@ else{
         $x = $slat1 * $slat2 + $clat1 * $clat2 * $cdelt;
         $d=atan2(sqrt($y), $x) * 6372; */
 	$temp = $temp . ';' . $coord;
-	$result = mysqli_query($link, "UPDATE tracks SET track_data='$temp' WHERE track_id=$trackID;");
+	$result = mysqli_query($link, "UPDATE tracks SET track_data='$temp' WHERE track_id='$trackID';");
 }
 mysqli_close($link);
 ?>
